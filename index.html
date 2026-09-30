@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Horario 5J - CBTis 128</title>
+  
+  <!-- ==========================================
+       BLOQUE DE ESTILOS CSS
+       ========================================== -->
+  <style>
+    /* Estilos generales del cuerpo de la página */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    /* Título principal ubicado por fuera de la tabla */
+    .titulo-principal {
+      text-align: center;
+      color: #1a73e8;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    /* Estructura general de la tabla */
+    .tabla-horario {
+      border-collapse: collapse; /* Une los bordes de las celdas */
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto; /* Centra la tabla horizontalmente */
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave alrededor */
+    }
+
+    /* Configuración básica para celdas de encabezado y contenido */
+    .tabla-horario th, 
+    .tabla-horario td {
+      border: 1px solid #333333; /* Borde gris oscuro */
+      text-align: center;
+      padding: 6px 4px;
+      font-size: 13px;
+      vertical-align: middle;
+      line-height: 1.2;
+    }
+
+    /* Estilo para los nombres de los días de la semana */
+    .encabezado-dia {
+      color: #1a73e8;
+      font-weight: bold;
+      font-size: 15px;
+      background-color: #ffffff;
+    }
+
+    /* Estilo para la columna de horas */
+    .col-hora {
+      font-weight: bold;
+      color: #3b73af;
+      width: 70px;
+      background-color: #ffffff;
+    }
+
+    /* ==========================================
+       CLASES DE COLORES POR MATERIA
+       ========================================== */
+    .ch2 {
+      background-color: #ffff80; /* Amarillo claro */
+      color: #000000;
+    }
+
+    .apli-adm {
+      background-color: #cad143; /* Verde/Amarillo oliva */
+      color: #000000;
+    }
+
+    .ingles {
+      background-color: #8c8238; /* Café / Oliva oscuro */
+      color: #000000;
+    }
+
+    .cneyt {
+      background-color: #80ff00; /* Verde brillante */
+      color: #000000;
+    }
+
+    .m4s1 {
+      background-color: #ff7d12; /* Naranja */
+      color: #000000;
+    }
+
+    .m4s2 {
+      background-color: #b5b5b5; /* Gris */
+      color: #000000;
+    }
+
+    .fs {
+      background-color: #a040ff; /* Morado */
+      color: #000000;
+    }
+
+    .tsdm {
+      background-color: #12b81d; /* Verde medio */
+      color: #000000;
+    }
+
+    /* Estilo para la fila del receso/recreo */
+    .recreo {
+      background-color: #ffffff;
+      color: #1a73e8;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* Estilo para celdas sin materia programada */
+    .vacio {
+      background-color: #fffff0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       TÍTULO PRINCIPAL (POR FUERA DE LA TABLA)
+       ========================================== -->
+  <h1 class="titulo-principal">Centro de Bachillerato Tecnologico Industrial y de Servicios 128 5-J</h1>
+
+  <!-- ==========================================
+       TABLA DEL HORARIO DE CLASES
+       ========================================== -->
+  <table class="tabla-horario">
+    
+    <!-- Encabezados de la tabla (Días de la semana) -->
+    <thead>
+      <tr>
+        <th class="col-hora">Hora</th>
+        <th class="encabezado-dia">Lunes</th>
+        <th class="encabezado-dia">Martes</th>
+        <th class="encabezado-dia">Miércoles</th>
+        <th class="encabezado-dia">Jueves</th>
+        <th class="encabezado-dia">Viernes</th>
+      </tr>
+    </thead>
+
+    <!-- Cuerpo de la tabla (Bloques de horas) -->
+    <tbody>
+      
+      <!-- BLOQUE 1: 7:00 - 8:00 -->
+      <tr>
+        <td class="col-hora">7:00<br>8:00</td>
+        <td class="vacio"></td>
+        <td class="ch2">5° CH 2<br>Juarez<br><b>AULA 38</b></td>
+        <td class="apli-adm">5° Apli. Adm<br>Estrada<br><b>AULA 38</b></td>
+        <td class="apli-adm">5° Apli. Adm<br>Estrada<br><b>AULA 38</b></td>
+        <td class="ingles">5° Ingles 5<br>Terrazas<br><b>AULA 38</b></td>
+      </tr>
+
+      <!-- BLOQUE 2: 8:00 - 9:00 -->
+      <tr>
+        <td class="col-hora">8:00<br>9:00</td>
+        <td class="vacio"></td>
+        <td class="apli-adm">5° Apli. Adm<br>Estrada<br><b>AULA 38</b></td>
+        <td class="ch2">5° CH 2<br>Juarez<br><b>AULA 38</b></td>
+        <td class="ingles">5° Ingles 5<br>Terrazas<br><b>AULA 38</b></td>
+        <td class="ch2">5° CH 2<br>Juarez<br><b>AULA 38</b></td>
+      </tr>
+
+      <!-- BLOQUE 3: 9:00 - 10:00 (Incluye materia de 2 hrs el martes con rowspan) -->
+      <tr>
+        <td class="col-hora">9:00<br>10:00</td>
+        <td class="ingles">5° Ingles 5<br>Terrazas<br><b>AULA 38</b></td>
+        <td class="m4s1" rowspan="2">PROG M4S1<br>Meza<br><b>AULA 38</b></td>
+        <td class="m4s1">PROG M4S1<br>Meza<br><b>AULA 38</b></td>
+        <td class="m4s1">PROG M4S1<br>Meza<br><b>AULA 38</b></td>
+        <td class="m4s1">PROG M4S1<br>Meza<br><b>AULA 38</b></td>
+      </tr>
+
+      <!-- BLOQUE 4: 10:00 - 10:50 -->
+      <tr>
+        <td class="col-hora">10:00<br>10:50</td>
+        <td class="cneyt">5° CNEyT 5<br>Reyes<br><b>AULA 38</b></td>
+        <!-- La celda del martes se omite aquí porque viene unida desde el bloque anterior -->
+        <td class="ingles">5° Ingles 5<br>Terrazas<br><b>AULA 38</b></td>
+        <td class="m4s1">PROG M4S1<br>Meza<br><b>AULA 38</b></td>
+        <td class="m4s1">PROG M4S1<br>Meza<br><b>AULA 38</b></td>
+      </tr>
+
+      <!-- BLOQUE DE RECREO -->
+      <tr>
+        <td colspan="6" class="recreo">Receso</td>
+      </tr>
+
+      <!-- BLOQUE 5: 11:10 - 12:00 el rowspan es para agrgar un celda hacia abajo-->
+      <tr>
+        <td class="col-hora">11:10<br>12:00</td>
+        <td class="m4s2">PROG M4S2<br>Gonzales A<br><b>AULA 38</b></td>
+        <td class="m4s2">PROG M4S2<br>Gonzales A<br><b>AULA 38</b></td>
+        <td class="cneyt" rowspan="2">5° CNEyT 5<br>Reyes<br><b>AULA 38</b></td>
+        <td class="m4s2">PROG M4S2<br>Gonzales A<br><b>AULA 38</b></td>
+        <td class="cneyt">5° CNEyT 5<br>Reyes<br><b>AULA 38</b></td>
+      </tr>
+
+      <!-- BLOQUE 6: 12:00 - 13:00 -->
+      <tr>
+        <td class="col-hora">12:00<br>13:00</td>
+        <td class="fs">5° FS<br>Meza<br><b>AULA 38</b></td>
+        <td class="ingles">5° Ingles 5<br>Terrazas<br><b>AULA 38</b></td>
+        <!-- La celda del miércoles se omite aquí porque viene unida desde el bloque anterior -->
+        <td class="m4s2">PROG M4S2<br>Gonzales A<br><b>AULA 38</b></td>
+        <td class="m4s2">PROG M4S2<br>Gonzales A<br><b>AULA 38</b></td>
+      </tr>
+
+      <!-- BLOQUE 7: 13:00 - 14:00 -->
+      <tr>
+        <td class="col-hora">13:00<br>14:00</td>
+        <td class="tsdm">5° TSdM 2<br>Macias<br><b>AULA 38</b></td>
+        <td class="tsdm">5° TSdM 2<br>Macias<br><b>AULA 38</b></td>
+        <td class="tsdm">5° TSdM 2<br>Macias<br><b>AULA 38</b></td>
+        <td class="tsdm">5° TSdM 2<br>Macias<br><b>AULA 38</b></td>
+        <td class="tsdm">5° TSdM 2<br>Macias<br><b>AULA 38</b></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</body>
+</html>
